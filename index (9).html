@@ -1,0 +1,1457 @@
+<!DOCTYPE html>
+<html lang="es-UY">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DesignWeb.uy — Tu página web por $100</title>
+  <meta name="description" content="Páginas web a medida para emprendimientos en crecimiento en Uruguay. Precio fijo de $100, sin plantillas genéricas ni sorpresas." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+/* =========================================================
+   DesignWeb.uy — Sistema de diseño
+   Paleta: tinta verde-carbón + verde crecimiento + mostaza
+   Tipografía: Fraunces (display) + Inter (texto)
+   ========================================================= */
+
+:root {
+  --ink: #16241f;
+  --ink-soft: #3c4a43;
+  --paper: #faf6ee;
+  --paper-dim: #f2ecdd;
+  --green: #2f6f4e;
+  --green-deep: #1f4d36;
+  --gold: #e8a33d;
+  --gold-deep: #c9821f;
+  --sand: #e4dcc8;
+  --white: #ffffff;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --max-w: 1160px;
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --radius-lg: 18px;
+
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4rem;
+  --space-6: 6.5rem;
+}
+
+/* ---------- Reset base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.12;
+  margin: 0;
+  color: var(--ink);
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--space-3);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* ---------- Botones ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.9rem 1.6rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+  min-height: 48px;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn--primary {
+  background: var(--green);
+  color: var(--white);
+}
+
+.btn--primary:hover {
+  background: var(--green-deep);
+}
+
+.btn--ghost {
+  background: transparent;
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+.btn--ghost:hover {
+  border-color: var(--green);
+  color: var(--green);
+}
+
+.btn--block {
+  width: 100%;
+  justify-content: center;
+}
+
+.btn svg {
+  flex-shrink: 0;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: rgba(250, 246, 238, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--sand);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-2);
+  padding-bottom: var(--space-2);
+}
+
+.logo {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.logo span {
+  color: var(--green);
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.main-nav__links {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.main-nav__links a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  position: relative;
+  padding: 0.25rem 0;
+}
+
+.main-nav__links a.btn {
+  color: var(--white);
+  padding: 0.6rem 1.2rem;
+}
+
+.main-nav__links a.btn::after {
+  display: none;
+}
+
+.main-nav__links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: var(--green);
+  transition: width 0.2s ease;
+}
+
+.main-nav__links a:hover::after,
+.main-nav__links a:focus-visible::after {
+  width: 100%;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--ink);
+  margin: 5px 0;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  padding: var(--space-5) 0 var(--space-6);
+  overflow: hidden;
+}
+
+.hero .container {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--space-5);
+  align-items: center;
+}
+
+.hero__kicker {
+  font-size: 1.05rem;
+  color: var(--green-deep);
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+}
+
+.hero__title {
+  font-size: clamp(2.2rem, 4.2vw, 3.4rem);
+  max-width: 15ch;
+}
+
+.hero__lead {
+  margin-top: var(--space-3);
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+  max-width: 46ch;
+}
+
+.hero__actions {
+  margin-top: var(--space-4);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.hero__note {
+  margin-top: var(--space-3);
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+/* Etiqueta de precio estilo cartel de negocio */
+.price-tag-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.price-tag {
+  --rotate: -4deg;
+  position: relative;
+  background: var(--green);
+  color: var(--white);
+  width: 260px;
+  padding: var(--space-4) var(--space-3) var(--space-3);
+  border-radius: var(--radius-lg);
+  transform: rotate(var(--rotate));
+  box-shadow: 10px 14px 0 var(--gold);
+  opacity: 0;
+  transform-origin: top center;
+}
+
+.price-tag__hole {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  background: var(--paper);
+  border-radius: 50%;
+  border: 3px solid var(--green-deep);
+}
+
+.price-tag__eyebrow {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--paper);
+  opacity: 0.85;
+  margin-top: var(--space-2);
+}
+
+.price-tag__amount {
+  font-family: var(--font-display);
+  font-size: 3.4rem;
+  line-height: 1;
+  margin-top: 0.35rem;
+}
+
+.price-tag__amount sup {
+  position: relative;
+  top: -1.6rem;
+  font-size: 1.3rem;
+  margin-right: 0.15rem;
+}
+
+.price-tag__amount small {
+  font-size: 1.1rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+}
+
+.price-tag__foot {
+  display: block;
+  margin-top: var(--space-2);
+  font-size: 0.85rem;
+  color: var(--paper);
+  opacity: 0.85;
+}
+
+/* Animación de entrada (único momento orquestado) */
+.hero__title,
+.hero__lead,
+.hero__actions,
+.hero__note {
+  opacity: 0;
+  transform: translateY(14px);
+  animation: rise 0.7s ease forwards;
+}
+
+.hero__title { animation-delay: 0.05s; }
+.hero__lead { animation-delay: 0.18s; }
+.hero__actions { animation-delay: 0.3s; }
+.hero__note { animation-delay: 0.4s; }
+
+.price-tag {
+  animation: settle 0.8s cubic-bezier(0.2, 0.8, 0.3, 1) 0.35s forwards;
+}
+
+@keyframes rise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes settle {
+  0% {
+    opacity: 0;
+    transform: rotate(6deg) translateY(-30px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(var(--rotate)) translateY(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__title,
+  .hero__lead,
+  .hero__actions,
+  .hero__note,
+  .price-tag {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
+
+/* ---------- Secciones genéricas ---------- */
+section {
+  padding: var(--space-6) 0;
+}
+
+.section__head {
+  max-width: 56ch;
+  margin-bottom: var(--space-5);
+}
+
+.section__title {
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+}
+
+.section__lead {
+  margin-top: var(--space-2);
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+}
+
+.section--alt {
+  background: var(--paper-dim);
+}
+
+/* ---------- Para quién es ---------- */
+.audience-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-3);
+}
+
+.audience-card {
+  border: 1px solid var(--sand);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  background: var(--white);
+}
+
+.audience-card__icon {
+  width: 40px;
+  height: 40px;
+  color: var(--green);
+  margin-bottom: var(--space-2);
+}
+
+.audience-card h3 {
+  font-size: 1.05rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+}
+
+.audience-card p {
+  margin-top: 0.4rem;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+}
+
+.audience-foot {
+  margin-top: var(--space-4);
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+  max-width: 60ch;
+}
+
+.audience-foot strong {
+  color: var(--ink);
+}
+
+/* ---------- Ticket "Qué incluye" ---------- */
+.ticket {
+  position: relative;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  background: var(--white);
+  border: 1px solid var(--ink);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.ticket::before,
+.ticket::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 26px;
+  height: 26px;
+  background: var(--paper-dim);
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.ticket::before { left: -13px; }
+.ticket::after { right: -13px; }
+
+.ticket__stub {
+  background: var(--green-deep);
+  color: var(--white);
+  padding: var(--space-4) var(--space-3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 2px dashed rgba(255, 255, 255, 0.35);
+}
+
+.ticket__stub-label {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  font-weight: 600;
+}
+
+.ticket__stub-amount {
+  font-family: var(--font-display);
+  font-size: 2.6rem;
+  margin-top: 0.3rem;
+}
+
+.ticket__stub-note {
+  margin-top: var(--space-2);
+  font-size: 0.85rem;
+  opacity: 0.85;
+  line-height: 1.5;
+}
+
+.ticket__body {
+  padding: var(--space-4) var(--space-4);
+}
+
+.ticket__list li {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--sand);
+  font-size: 0.98rem;
+}
+
+.ticket__list li:last-child {
+  border-bottom: none;
+}
+
+.ticket__list li::before {
+  content: "✓";
+  color: var(--green);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.ticket__disclaimer {
+  margin-top: var(--space-3);
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+/* ---------- Cómo funciona ---------- */
+.steps {
+  position: relative;
+  display: grid;
+  gap: var(--space-4);
+  padding-left: var(--space-5);
+}
+
+.steps__line {
+  position: absolute;
+  left: 21px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: var(--sand);
+}
+
+.steps__line-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 0%;
+  background: var(--green);
+  transition: height 1.1s ease;
+}
+
+.step {
+  position: relative;
+}
+
+.step__index {
+  position: absolute;
+  left: calc(-1 * var(--space-5));
+  top: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 2px solid var(--green);
+  color: var(--green-deep);
+  font-family: var(--font-display);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step h3 {
+  font-size: 1.15rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+}
+
+.step p {
+  margin-top: 0.35rem;
+  color: var(--ink-soft);
+  max-width: 60ch;
+}
+
+/* ---------- Por qué elegirnos ---------- */
+.reasons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4) var(--space-5);
+}
+
+.reason {
+  display: flex;
+  gap: var(--space-2);
+  border-top: 2px solid var(--ink);
+  padding-top: var(--space-2);
+}
+
+.reason__mark {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--gold-deep);
+  flex-shrink: 0;
+}
+
+.reason h3 {
+  font-size: 1.1rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+}
+
+.reason p {
+  margin-top: 0.35rem;
+  color: var(--ink-soft);
+  font-size: 0.96rem;
+}
+
+/* ---------- FAQ ---------- */
+.faq {
+  max-width: 780px;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--sand);
+}
+
+.faq-item__question {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: var(--space-3) 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.faq-item__icon {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  position: relative;
+}
+
+.faq-item__icon::before,
+.faq-item__icon::after {
+  content: "";
+  position: absolute;
+  background: var(--green);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.faq-item__icon::before {
+  width: 14px;
+  height: 2px;
+}
+
+.faq-item__icon::after {
+  width: 2px;
+  height: 14px;
+}
+
+.faq-item[open] .faq-item__icon::after {
+  opacity: 0;
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.faq-item__answer {
+  padding: 0 0 var(--space-3);
+  color: var(--ink-soft);
+  max-width: 65ch;
+}
+
+/* Usamos <details> nativo, sin marcador por defecto */
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+/* ---------- Contacto ---------- */
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+  align-items: start;
+}
+
+.contact__whatsapp {
+  background: var(--green-deep);
+  color: var(--white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+}
+
+.contact__whatsapp h3 {
+  font-size: 1.3rem;
+  color: var(--white);
+}
+
+.contact__whatsapp p {
+  margin-top: var(--space-2);
+  opacity: 0.9;
+  max-width: 40ch;
+}
+
+.contact__whatsapp .btn {
+  margin-top: var(--space-3);
+  background: var(--gold);
+  color: var(--ink);
+}
+
+.contact__whatsapp .btn:hover {
+  background: var(--gold-deep);
+  color: var(--white);
+}
+
+.form-field {
+  margin-bottom: var(--space-2);
+}
+
+.form-field label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  border: 1.5px solid var(--sand);
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 1rem;
+  background: var(--white);
+  color: var(--ink);
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: var(--green);
+}
+
+.form-note {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin-top: var(--space-2);
+}
+
+.form-status {
+  margin-top: var(--space-2);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--green-deep);
+  min-height: 1.2em;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  border-top: 1px solid var(--sand);
+  padding: var(--space-4) 0;
+}
+
+.site-footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-2);
+  align-items: center;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+.site-footer a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 960px) {
+  .hero .container {
+    grid-template-columns: 1fr;
+  }
+
+  .price-tag-wrap {
+    order: -1;
+  }
+
+  .price-tag {
+    width: 200px;
+  }
+
+  .audience-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .reasons {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+
+  .contact {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .main-nav__links {
+    position: fixed;
+    inset: 64px var(--space-3) auto var(--space-3);
+    background: var(--paper);
+    border: 1px solid var(--sand);
+    border-radius: var(--radius-md);
+    flex-direction: column;
+    padding: var(--space-2);
+    gap: 0;
+    box-shadow: 0 12px 24px rgba(22, 36, 31, 0.12);
+    transform: translateY(-8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .main-nav__links a {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .main-nav.is-open .main-nav__links {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .main-nav.is-open .nav-toggle span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .main-nav.is-open .nav-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+  .main-nav.is-open .nav-toggle span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}
+
+@media (max-width: 620px) {
+  .audience-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ticket {
+    grid-template-columns: 1fr;
+  }
+
+  .ticket__stub {
+    border-right: none;
+    border-bottom: 2px dashed rgba(255, 255, 255, 0.35);
+  }
+
+  .ticket::before {
+    top: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .ticket::after {
+    top: auto;
+    bottom: -13px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+
+  .steps {
+    padding-left: var(--space-4);
+  }
+
+  .step__index {
+    left: calc(-1 * var(--space-4));
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="#inicio" class="logo">Design<span>Web</span>.uy</a>
+
+      <nav class="main-nav" id="main-nav">
+        <ul class="main-nav__links">
+          <li><a href="#servicio">Servicio</a></li>
+          <li><a href="#como-funciona">Cómo funciona</a></li>
+          <li><a href="#preguntas">Preguntas</a></li>
+          <li><a href="#contacto" class="btn btn--primary">Escribime</a></li>
+        </ul>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero__copy">
+          <p class="hero__kicker">Diseño y desarrollo web para emprendimientos</p>
+          <h1 class="hero__title">Tu negocio ya está creciendo. Que tu web no se quede atrás.</h1>
+          <p class="hero__lead">
+            Te armo una página web a medida para tu emprendimiento: hecha para mostrar lo que hacés,
+            que te encuentren en el celular y que puedan escribirte con un solo toque. Precio fijo,
+            sin vueltas.
+          </p>
+          <div class="hero__actions">
+            <a href="#contacto" class="btn btn--primary" id="whatsapp-hero">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.87.5 3.62 1.44 5.12L2 22l5.2-1.53a9.87 9.87 0 0 0 4.84 1.28h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.82 14.08c-.24.68-1.4 1.3-1.93 1.38-.5.08-1.12.11-1.8-.11-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.78-4.15-4.93-4.35-.15-.2-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.26-.28.57-.35.76-.35.19 0 .38 0 .55.01.18.01.42-.07.65.5.24.58.8 2 .87 2.15.07.15.11.32.02.5-.09.19-.14.3-.27.46-.13.16-.28.35-.4.47-.13.13-.27.27-.11.55.16.28.71 1.18 1.53 1.91 1.05.94 1.94 1.24 2.22 1.38.28.13.44.11.6-.06.16-.18.7-.81.88-1.09.19-.28.37-.23.62-.14.25.1 1.59.75 1.87.88.27.14.45.21.51.32.07.11.07.63-.17 1.31Z"/></svg>
+              Escribime por WhatsApp
+            </a>
+            <a href="#servicio" class="btn btn--ghost">Ver qué incluye</a>
+          </div>
+          <p class="hero__note">Web lista para mostrar tu negocio, no una plantilla con tu logo pegado.</p>
+        </div>
+
+        <div class="price-tag-wrap">
+          <div class="price-tag">
+            <span class="price-tag__hole" aria-hidden="true"></span>
+            <span class="price-tag__eyebrow">Precio único</span>
+            <p class="price-tag__amount"><sup>USD</sup>$100</p>
+            <span class="price-tag__foot">tu web, lista</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARA QUIÉN ES -->
+    <section id="para-quien" class="section--alt">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">¿Es para tu negocio?</h2>
+          <p class="section__lead">
+            Trabajo con emprendimientos uruguayos que están creciendo y necesitan una presencia
+            online que dé confianza, sin pagar precios de agencia grande.
+          </p>
+        </div>
+
+        <div class="audience-grid">
+          <article class="audience-card">
+            <svg class="audience-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 9.5 12 4l9 5.5"/><path d="M5 10v9h14v-9"/><path d="M9 19v-5h6v5"/></svg>
+            <h3>Comercios y tiendas</h3>
+            <p>Kioscos, ferreterías, indumentaria, productos por catálogo.</p>
+          </article>
+          <article class="audience-card">
+            <svg class="audience-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 19h16"/><path d="M7 19V9l5-4 5 4v10"/><path d="M10 19v-4h4v4"/></svg>
+            <h3>Gastronomía</h3>
+            <p>Bares, cafeterías, rotiserías y emprendimientos de comida.</p>
+          </article>
+          <article class="audience-card">
+            <svg class="audience-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.2"/><path d="M5.5 20a6.5 6.5 0 0 1 13 0"/></svg>
+            <h3>Belleza y estética</h3>
+            <p>Peluquerías, barberías, spas y estudios de estética.</p>
+          </article>
+          <article class="audience-card">
+            <svg class="audience-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 9h8M8 13h8M8 17h5"/></svg>
+            <h3>Servicios profesionales</h3>
+            <p>Gestores, contadores, arquitectos, consultorías chicas.</p>
+          </article>
+        </div>
+
+        <p class="audience-foot">
+          Si tu emprendimiento está creciendo y <strong>todavía no tiene página web</strong>
+          (o tiene una que no lo representa), es para vos.
+        </p>
+      </div>
+    </section>
+
+    <!-- QUÉ INCLUYE -->
+    <section id="servicio">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Qué incluye tu web</h2>
+          <p class="section__lead">
+            Un precio fijo, con todo lo necesario para que tu negocio tenga presencia online real.
+          </p>
+        </div>
+
+        <div class="ticket">
+          <div class="ticket__stub">
+            <span class="ticket__stub-label">Precio final</span>
+            <span class="ticket__stub-amount">$100</span>
+            <p class="ticket__stub-note">USD · pago único<br>sin costos ocultos</p>
+          </div>
+          <div class="ticket__body">
+            <ul class="ticket__list">
+              <li>Diseño a medida para tu negocio, no una plantilla genérica</li>
+              <li>Hasta 5 secciones: inicio, sobre el negocio, servicios o productos, opiniones y contacto</li>
+              <li>Botón de WhatsApp para que tus clientes te escriban directo</li>
+              <li>Optimizada para que se vea bien en el celular, donde te van a encontrar</li>
+              <li>Entrega en el plazo que acordamos, con una ronda de ajustes incluida</li>
+            </ul>
+            <p class="ticket__disclaimer">
+              Dominio y hosting se cotizan por separado según lo que necesites; te asesoro para
+              conseguirlos al mejor precio.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CÓMO FUNCIONA -->
+    <section id="como-funciona" class="section--alt">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Cómo funciona</h2>
+          <p class="section__lead">Cinco pasos, sin trámites largos ni formularios eternos.</p>
+        </div>
+
+        <div class="steps" id="steps">
+          <div class="steps__line"><div class="steps__line-fill" id="steps-line-fill"></div></div>
+
+          <div class="step">
+            <span class="step__index">1</span>
+            <h3>Me contás de tu negocio</h3>
+            <p>Un par de preguntas simples: qué hacés, a quién le vendés y qué querés que la gente vea primero.</p>
+          </div>
+          <div class="step">
+            <span class="step__index">2</span>
+            <h3>Te mando una propuesta</h3>
+            <p>Te digo exactamente qué va a tener tu web y en cuánto tiempo la tenés lista.</p>
+          </div>
+          <div class="step">
+            <span class="step__index">3</span>
+            <h3>La diseño y armo</h3>
+            <p>Trabajo en tu página con tus textos, tus fotos (o unas bien elegidas si todavía no tenés) y tu marca.</p>
+          </div>
+          <div class="step">
+            <span class="step__index">4</span>
+            <h3>La revisamos juntos</h3>
+            <p>Te la muestro, me decís qué cambiarías y hacemos los ajustes incluidos.</p>
+          </div>
+          <div class="step">
+            <span class="step__index">5</span>
+            <h3>Queda lista y online</h3>
+            <p>Publicamos tu web y quedás con un lugar propio para mostrar tu negocio en internet.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- POR QUÉ ELEGIRNOS -->
+    <section id="por-que">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Por qué trabajar conmigo</h2>
+        </div>
+
+        <div class="reasons">
+          <div class="reason">
+            <span class="reason__mark">§</span>
+            <div>
+              <h3>Precio fijo, no por hora</h3>
+              <p>Sabés exactamente cuánto pagás desde el primer mensaje, sin sorpresas en la factura final.</p>
+            </div>
+          </div>
+          <div class="reason">
+            <span class="reason__mark">§</span>
+            <div>
+              <h3>Hecha a medida</h3>
+              <p>Cada web se piensa para tu negocio puntual, no es una plantilla con tu logo pegado encima.</p>
+            </div>
+          </div>
+          <div class="reason">
+            <span class="reason__mark">§</span>
+            <div>
+              <h3>Trato directo</h3>
+              <p>Hablás conmigo de principio a fin. Nada de tickets de soporte ni intermediarios.</p>
+            </div>
+          </div>
+          <div class="reason">
+            <span class="reason__mark">§</span>
+            <div>
+              <h3>Pensada para el celular</h3>
+              <p>La mayoría de tus clientes te va a encontrar desde el teléfono, así que empiezo por ahí.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="preguntas" class="section--alt">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Preguntas frecuentes</h2>
+        </div>
+
+        <div class="faq">
+          <details class="faq-item" name="faq">
+            <summary class="faq-item__question">
+              ¿Cuánto tarda en estar lista mi web?
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__answer">
+              <p>Depende de cuánto contenido tengamos listo, pero el plazo habitual se acuerda en la propuesta inicial y suele rondar entre una semana y diez días desde que me pasás todo el material.</p>
+            </div>
+          </details>
+
+          <details class="faq-item" name="faq">
+            <summary class="faq-item__question">
+              ¿Necesito tener dominio y hosting antes de empezar?
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__answer">
+              <p>No. Si todavía no tenés, te ayudo a elegir y conseguir el dominio y el hosting más convenientes para tu caso. Ese costo se cotiza aparte porque depende del proveedor.</p>
+            </div>
+          </details>
+
+          <details class="faq-item" name="faq">
+            <summary class="faq-item__question">
+              ¿Puedo pedir cambios después de ver la web?
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__answer">
+              <p>Sí, la propuesta incluye una ronda de ajustes antes de la entrega final. Cambios grandes o fuera de lo acordado se cotizan por separado.</p>
+            </div>
+          </details>
+
+          <details class="faq-item" name="faq">
+            <summary class="faq-item__question">
+              ¿Y si todavía no tengo fotos o logo?
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__answer">
+              <p>No es un problema. Podemos arrancar con imágenes provisorias bien elegidas y actualizarlas cuando las tengas, o te sugiero opciones simples para conseguir buenas fotos de tu negocio.</p>
+            </div>
+          </details>
+
+          <details class="faq-item" name="faq">
+            <summary class="faq-item__question">
+              ¿Cómo se paga?
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__answer">
+              <p>Lo conversamos por WhatsApp según lo que te resulte más cómodo. Te cuento las formas de pago disponibles apenas confirmamos el proyecto.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Empecemos con tu web</h2>
+          <p class="section__lead">Contame de tu negocio y te respondo con los próximos pasos.</p>
+        </div>
+
+        <div class="contact">
+          <div class="contact__whatsapp">
+            <h3>La vía más rápida</h3>
+            <p>Escribime directo por WhatsApp y te cuento cómo seguimos con tu negocio.</p>
+            <a href="#" class="btn" id="whatsapp-contact">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.87.5 3.62 1.44 5.12L2 22l5.2-1.53a9.87 9.87 0 0 0 4.84 1.28h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.82 14.08c-.24.68-1.4 1.3-1.93 1.38-.5.08-1.12.11-1.8-.11-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.78-4.15-4.93-4.35-.15-.2-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.26-.28.57-.35.76-.35.19 0 .38 0 .55.01.18.01.42-.07.65.5.24.58.8 2 .87 2.15.07.15.11.32.02.5-.09.19-.14.3-.27.46-.13.16-.28.35-.4.47-.13.13-.27.27-.11.55.16.28.71 1.18 1.53 1.91 1.05.94 1.94 1.24 2.22 1.38.28.13.44.11.6-.06.16-.18.7-.81.88-1.09.19-.28.37-.23.62-.14.25.1 1.59.75 1.87.88.27.14.45.21.51.32.07.11.07.63-.17 1.31Z"/></svg>
+              Escribime por WhatsApp
+            </a>
+          </div>
+
+          <form id="contact-form" novalidate>
+            <div class="form-field">
+              <label for="name">Tu nombre</label>
+              <input type="text" id="name" name="name" autocomplete="name" required />
+            </div>
+            <div class="form-field">
+              <label for="business">Tu negocio</label>
+              <input type="text" id="business" name="business" autocomplete="organization" required />
+            </div>
+            <div class="form-field">
+              <label for="phoneEmail">Teléfono o email</label>
+              <input type="text" id="phoneEmail" name="phoneEmail" autocomplete="email" required />
+            </div>
+            <div class="form-field">
+              <label for="message">Contame un poco de tu negocio</label>
+              <textarea id="message" name="message" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--block">Enviar por WhatsApp</button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            <p class="form-note">Al enviar, se abre WhatsApp con tus datos ya escritos para que solo tengas que confirmar el envío.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>Design<a href="#inicio">Web</a>.uy</span>
+      <span>Hecho en Uruguay · <span id="year"></span></span>
+    </div>
+  </footer>
+
+  <script>
+/* =========================================================
+   DesignWeb.uy — main.js
+   Todo lo que hay que editar para poner en marcha el sitio
+   está reunido en el objeto CONFIG de acá abajo.
+   ========================================================= */
+
+const CONFIG = {
+  // Reemplazá por tu número real, con código de país, solo números.
+  // Ejemplo Uruguay: "59899999999"
+  whatsappNumber: "PON_TU_NUMERO_AQUI",
+
+  // Mensaje que aparece ya escrito cuando alguien toca "Escribime por WhatsApp"
+  // desde el hero o desde el botón de contacto (sin pasar por el formulario).
+  defaultMessage: "Hola! Vi tu página DesignWeb.uy y quiero averiguar por una web para mi negocio.",
+};
+
+function buildWhatsAppLink(message) {
+  const digitsOnly = CONFIG.whatsappNumber.replace(/\D/g, "");
+  const text = encodeURIComponent(message);
+  if (!digitsOnly) {
+    // Todavía no se cargó el número real: evitamos un link roto.
+    return null;
+  }
+  return `https://wa.me/${digitsOnly}?text=${text}`;
+}
+
+function wireStaticWhatsAppButtons() {
+  const link = buildWhatsAppLink(CONFIG.defaultMessage);
+  const buttons = [
+    document.getElementById("whatsapp-hero"),
+    document.getElementById("whatsapp-contact"),
+  ];
+
+  buttons.forEach((btn) => {
+    if (!btn) return;
+    if (link) {
+      btn.setAttribute("href", link);
+      btn.setAttribute("target", "_blank");
+      btn.setAttribute("rel", "noopener");
+    } else {
+      // Sin número configurado todavía: el botón lleva al formulario.
+      btn.setAttribute("href", "#contacto");
+    }
+  });
+}
+
+function wireMobileNav() {
+  const nav = document.getElementById("main-nav");
+  const toggle = document.getElementById("nav-toggle");
+  if (!nav || !toggle) return;
+
+  toggle.addEventListener("click", () => {
+    const isOpen = nav.classList.toggle("is-open");
+    toggle.setAttribute("aria-expanded", String(isOpen));
+    toggle.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
+  });
+
+  nav.querySelectorAll(".main-nav__links a").forEach((link) => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("is-open");
+      toggle.setAttribute("aria-expanded", "false");
+    });
+  });
+}
+
+function wireContactForm() {
+  const form = document.getElementById("contact-form");
+  const status = document.getElementById("form-status");
+  if (!form) return;
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const name = form.name.value.trim();
+    const business = form.business.value.trim();
+    const phoneEmail = form.phoneEmail.value.trim();
+    const message = form.message.value.trim();
+
+    if (!name || !business || !phoneEmail) {
+      if (status) status.textContent = "Completá nombre, negocio y un dato de contacto para continuar.";
+      return;
+    }
+
+    const text = [
+      `Hola! Soy ${name} de ${business}.`,
+      `Quiero averiguar por una web para mi negocio.`,
+      message ? `Un poco de contexto: ${message}` : null,
+      `Para responderme podés usar: ${phoneEmail}`,
+    ]
+      .filter(Boolean)
+      .join(" ");
+
+    const link = buildWhatsAppLink(text);
+
+    if (!link) {
+      if (status) {
+        status.textContent =
+          "El WhatsApp todavía no está configurado en el sitio. Escribinos por otro medio mientras tanto.";
+      }
+      return;
+    }
+
+    if (status) status.textContent = "¡Listo! Te llevamos a WhatsApp para confirmar el envío.";
+    window.open(link, "_blank", "noopener");
+    form.reset();
+  });
+}
+
+function wireStepsAnimation() {
+  const steps = document.getElementById("steps");
+  const fill = document.getElementById("steps-line-fill");
+  if (!steps || !fill) return;
+
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (prefersReducedMotion) {
+    fill.style.height = "100%";
+    return;
+  }
+
+  if (!("IntersectionObserver" in window)) {
+    fill.style.height = "100%";
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          fill.style.height = "100%";
+          observer.disconnect();
+        }
+      });
+    },
+    { threshold: 0.35 }
+  );
+
+  observer.observe(steps);
+}
+
+function setFooterYear() {
+  const el = document.getElementById("year");
+  if (el) el.textContent = new Date().getFullYear();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  wireStaticWhatsAppButtons();
+  wireMobileNav();
+  wireContactForm();
+  wireStepsAnimation();
+  setFooterYear();
+});
+
+  </script>
+</body>
+</html>
