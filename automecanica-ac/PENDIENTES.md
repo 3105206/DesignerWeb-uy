@@ -50,14 +50,23 @@ Horizontales, no verticales.
 
 ### 3. Logo original en buena calidad
 
-En la web hay una **reconstrucción** del logo hecha a partir de la imagen que
-se pasó (`assets/logo.svg`). Se ve bien, pero no es el archivo original.
+En la web hay una **reconstrucción vectorial** del logo (`assets/logo.svg`),
+redibujada a partir del logo original: mismas formas, mismos colores y misma
+composición (cápsula azul + mancha amarilla + AC con contorno). La diferencia
+es la tipografía: usa Archivo, la del sitio, no la letra exacta del original.
 
-Lo ideal: el archivo **vectorial** (`.ai`, `.svg` o `.pdf`) o, si no existe,
-el `.png` más grande que tengan, con fondo transparente.
+Lo ideal es reemplazarla por el archivo del cliente: el **vectorial**
+(`.ai`, `.svg` o `.pdf`) o, si no existe, el `.png` más grande que tengan,
+con fondo transparente.
 
-- **Dónde va:** `assets/`, reemplazando `logo.svg` (hay que actualizar la
-  ruta en `index.html`, aparece 2 veces: en el header y en el pie).
+- **Dónde va:** en `assets/`. Si el archivo es `logo.png`, hay que cambiar
+  la ruta en `index.html`: aparece 2 veces (header y pie), buscar
+  `assets/logo.svg`. Y ajustar los atributos `width` y `height` del `<img>`
+  a las medidas reales del archivo nuevo, así la página no "salta" mientras
+  carga.
+- El favicon (`assets/favicon.svg`) y la imagen de previsualización
+  (`assets/og-image.png`) están hechos con la misma reconstrucción: conviene
+  rehacerlos también cuando llegue el original.
 
 ### 4. Email de contacto
 
