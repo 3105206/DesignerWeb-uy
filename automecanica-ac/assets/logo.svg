@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Automecanica AC — logo provisorio reconstruido a partir del logo original.
+  REEMPLAZAR por el archivo real del cliente (assets/logo.png) cuando lo manden.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 150" width="560" height="150" role="img" aria-label="Automecanica AC">
+  <title>Automecanica AC</title>
+  <!-- Cápsula azul marino -->
+  <rect x="2" y="26" width="400" height="98" rx="49" fill="#152A6B"/>
+  <text x="40" y="92"
+        font-family="Archivo, 'Archivo Black', 'Helvetica Neue', Arial, sans-serif"
+        font-size="52" font-weight="700" font-style="italic"
+        letter-spacing="-1" fill="#FFFFFF">Automecanica</text>
+  <!-- Mancha amarilla pintada a mano -->
+  <path fill="#EDE81C" d="M406 44c14-16 46-26 78-24 30 2 56 13 65 30 10 18 6 42-10 58-17 17-48 26-80 24-31-2-55-13-62-30-8-18-5-42 9-58z"/>
+  <path fill="#EDE81C" d="M418 30c9-6 22-8 30-4 6 3 4 9-4 12-11 4-24 4-30 1-5-3-2-7 4-9z" opacity=".85"/>
+  <path fill="#EDE81C" d="M540 118c8-3 14 0 12 6-2 7-13 12-21 10-7-2-6-9 1-13z" opacity=".75"/>
+  <text x="446" y="100"
+        font-family="Archivo, 'Archivo Black', 'Helvetica Neue', Arial, sans-serif"
+        font-size="58" font-weight="700" font-style="italic"
+        letter-spacing="-1" fill="#FFFFFF">AC</text>
+</svg>

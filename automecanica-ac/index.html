@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="es-UY">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Automecanica AC — Service oficial y taller mecánico en Melo, Cerro Largo</title>
+<meta name="description" content="Taller mecánico en Melo, Cerro Largo. Service oficial Nissan, Peugeot, Mitsubishi, Renault, Great Wall, Omoda y BYD. Reparaciones generales, alineación y balanceo. Juana de Ibarbourou 760. Pedí turno por WhatsApp.">
+<meta name="theme-color" content="#152A6B">
+<link rel="canonical" href="https://automecanica-ac.netlify.app/"><!-- REEMPLAZAR: dominio final del sitio -->
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Automecanica AC">
+<meta property="og:locale" content="es_UY">
+<meta property="og:title" content="Automecanica AC — Service oficial en Melo, Cerro Largo">
+<meta property="og:description" content="Service oficial Nissan, Peugeot, Mitsubishi, Renault, Great Wall, Omoda y BYD. Reparaciones generales, alineación y balanceo en Juana de Ibarbourou 760, Melo.">
+<meta property="og:url" content="https://automecanica-ac.netlify.app/"><!-- REEMPLAZAR: dominio final del sitio -->
+<meta property="og:image" content="assets/og-image.png"><!-- REEMPLAZAR: imagen real del taller, 1200x630 -->
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Tipografías -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="saltar" href="#agenda">Saltar al pedido de turno</a>
+
+<!-- ============================ HEADER ============================ -->
+<header class="cabecera" id="cabecera">
+  <div class="contenedor cabecera__fila">
+
+    <a class="marca" href="#inicio" aria-label="Automecanica AC, inicio">
+      <img src="assets/logo.svg" alt="Automecanica AC" width="560" height="150" class="marca__logo">
+      <!-- REEMPLAZAR: logo original del cliente (assets/logo.png) -->
+    </a>
+
+    <nav class="nav" id="nav-principal" aria-label="Navegación principal">
+      <ul class="nav__lista">
+        <li><a href="#marcas">Marcas</a></li>
+        <li><a href="#agenda">Pedir turno</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#ubicacion">Dónde estamos</a></li>
+      </ul>
+      <div class="nav__acciones">
+        <a class="tel-link" href="tel:+59846434358" data-bind="telefono-link">
+          <span aria-hidden="true">☎</span>
+          <span data-bind="telefono">4643 4358</span>
+        </a>
+        <a class="boton boton--wsp" href="https://wa.me/59899000000" data-wsp-simple target="_blank" rel="noopener">
+          WhatsApp
+        </a>
+      </div>
+    </nav>
+
+    <button class="hamburguesa" id="btn-menu" type="button"
+            aria-expanded="false" aria-controls="nav-principal" aria-label="Abrir menú">
+      <span class="hamburguesa__barra"></span>
+      <span class="hamburguesa__barra"></span>
+      <span class="hamburguesa__barra"></span>
+    </button>
+
+  </div>
+</header>
+
+<main id="inicio">
+
+<!-- ============================= HERO ============================= -->
+<section class="hero">
+  <div class="contenedor hero__grid">
+
+    <div class="hero__texto">
+      <p class="etiqueta">Melo · Cerro Largo</p>
+
+      <h1 class="hero__titulo">
+        Service oficial<br>
+        y taller mecánico<br>
+        <span class="subrayado">en Melo</span>
+      </h1>
+
+      <p class="hero__bajada">
+        Service oficial de Nissan, Peugeot, Mitsubishi, Renault, Great Wall, Omoda y BYD.
+        También reparaciones generales, alineación y balanceo.
+      </p>
+
+      <p class="hero__estado" data-estado>
+        <span class="estado__punto" aria-hidden="true"></span>
+        <span data-estado-texto>Lunes a viernes de 8:00 a 17:30</span>
+      </p>
+
+      <div class="hero__botones">
+        <a class="boton boton--primario" href="#agenda">Pedir turno</a>
+        <a class="boton boton--linea" href="https://www.google.com/maps/search/?api=1&amp;query=Juana+de+Ibarbourou+760,+37000+Melo,+Cerro+Largo,+Uruguay"
+           data-bind="maps-link" target="_blank" rel="noopener">Cómo llegar</a>
+      </div>
+    </div>
+
+    <ul class="hero__datos">
+      <li>
+        <span class="hero__datoTitulo">Dirección</span>
+        <span class="hero__datoValor" data-bind="direccion-completa">Juana de Ibarbourou 760, Melo</span>
+      </li>
+      <li>
+        <span class="hero__datoTitulo">Horario</span>
+        <span class="hero__datoValor">Lunes a viernes, 8:00 a 17:30<br><span class="tenue">Sábados y domingos cerrado</span></span>
+      </li>
+      <li>
+        <span class="hero__datoTitulo">Teléfono</span>
+        <span class="hero__datoValor">
+          <a href="tel:+59846434358" data-bind="telefono-link"><span data-bind="telefono">4643 4358</span></a>
+        </span>
+      </li>
+    </ul>
+
+  </div>
+</section>
+
+<!-- ============================ MARCAS ============================ -->
+<section class="marcas" id="marcas" aria-labelledby="marcas-titulo">
+  <div class="contenedor">
+    <header class="seccion__cabecera seccion__cabecera--claro">
+      <p class="etiqueta etiqueta--amarilla">Nuestro diferencial</p>
+      <h2 class="seccion__titulo" id="marcas-titulo">Service oficial de 7 marcas</h2>
+      <p class="seccion__bajada">
+        Seguimos el plan de mantenimiento de cada marca, con los kilometrajes que corresponden.
+      </p>
+    </header>
+
+    <ul class="marcas__grilla" data-revelar-grupo>
+      <li class="marca-item" data-revelar><span>Nissan</span></li>
+      <li class="marca-item" data-revelar><span>Peugeot</span></li>
+      <li class="marca-item" data-revelar><span>Mitsubishi</span></li>
+      <li class="marca-item" data-revelar><span>Renault</span></li>
+      <li class="marca-item" data-revelar><span>Great Wall</span></li>
+      <li class="marca-item" data-revelar><span>Omoda</span></li>
+      <li class="marca-item" data-revelar><span>BYD</span></li>
+      <li class="marca-item marca-item--otras" data-revelar>
+        <span>¿Otra marca?</span>
+        <small>Hacemos reparaciones generales de cualquier marca</small>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================ AGENDA ============================ -->
+<section class="agenda" id="agenda" aria-labelledby="agenda-titulo">
+  <div class="contenedor">
+
+    <header class="seccion__cabecera">
+      <p class="etiqueta">Turnos</p>
+      <h2 class="seccion__titulo" id="agenda-titulo">Agendá tu turno</h2>
+      <p class="seccion__bajada">
+        Elegí el tipo de trabajo, completá los datos y te abrimos WhatsApp con el mensaje
+        ya escrito. Nosotros te confirmamos el día y la hora.
+      </p>
+    </header>
+
+    <div class="turnos">
+
+      <!-- Pestañas -->
+      <div class="turnos__tabs" role="tablist" aria-label="Tipo de turno">
+        <button class="tab tab--activa" type="button" role="tab" id="tab-service"
+                aria-selected="true" aria-controls="panel-service" data-tab="service">
+          <span class="tab__titulo">Service oficial</span>
+          <span class="tab__nota" data-cupos-tab="service">3 cupos por día</span>
+        </button>
+        <button class="tab" type="button" role="tab" id="tab-reparacion" tabindex="-1"
+                aria-selected="false" aria-controls="panel-reparacion" data-tab="reparacion">
+          <span class="tab__titulo">Reparaciones</span>
+          <span class="tab__nota" data-cupos-tab="reparacion">2 cupos por día</span>
+        </button>
+        <button class="tab" type="button" role="tab" id="tab-alineacion" tabindex="-1"
+                aria-selected="false" aria-controls="panel-alineacion" data-tab="alineacion">
+          <span class="tab__titulo">Alineación y balanceo</span>
+          <span class="tab__nota" data-cupos-tab="alineacion">1 cupo por día</span>
+        </button>
+      </div>
+
+      <!-- ---------------- PANEL: SERVICE OFICIAL ---------------- -->
+      <div class="panel" id="panel-service" role="tabpanel" aria-labelledby="tab-service" data-panel="service">
+        <p class="panel__intro">
+          Para autos de las marcas con service oficial. Si no sabés qué service te toca, lo vemos juntos.
+        </p>
+
+        <form class="form" data-flujo="service" data-titulo="SERVICE OFICIAL" novalidate>
+
+          <div class="campo">
+            <label for="s-marca">Marca <span class="req" aria-hidden="true">*</span></label>
+            <select id="s-marca" name="marca" data-label="Marca" required data-select-marcas>
+              <option value="">Elegí la marca</option>
+              <option>Nissan</option>
+              <option>Peugeot</option>
+              <option>Mitsubishi</option>
+              <option>Renault</option>
+              <option>Great Wall</option>
+              <option>Omoda</option>
+              <option>BYD</option>
+            </select>
+            <p class="campo__error" hidden></p>
+          </div>
+
+          <div class="campo">
+            <label for="s-modelo">Modelo y año <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="s-modelo" name="modelo" data-label="Modelo y año"
+                   placeholder="Ej: Frontier 2019" autocomplete="off" required>
+            <p class="campo__error" hidden></p>
+          </div>
+
+          <div class="campo">
+            <label for="s-km">Kilometraje aproximado <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="s-km" name="km" data-label="Kilometraje" inputmode="numeric"
+                   placeholder="Ej: 60000" autocomplete="off" required>
+            <p class="campo__ayuda">Si no lo sabés exacto, poné un número aproximado.</p>
+            <p class="campo__error" hidden></p>
+          </div>
+
+          <div class="campo">
+            <label for="s-tipo">Tipo de service</label>
+            <select id="s-tipo" name="tipoService" data-label="Tipo de service" data-select-tipos>
+              <option>No estoy seguro</option>
+              <option>Service de 5.000 km</option>
+              <option>Service de 10.000 km</option>
+              <option>Service de 20.000 km</option>
+              <option>Service de 40.000 km</option>
+            </select>
+            <p class="campo__error" hidden></p>
+          </div>
+
+          <div class="campo">
+            <label for="s-dia">Día que te viene bien <span class="req" aria-hidden="true">*</span></label>
+            <input type="date" id="s-dia" name="dia" data-label="Día que me viene bien"
+                   data-fecha required>
+            <p class="campo__ayuda">De lunes a viernes. Después te confirmamos la hora.</p>
+            <p class="campo__error" hidden></p>
+          </div>
+
+          <div class="campo">
+            <label for="s-nombre">Tu nombre <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="s-nombre" name="nombre" data-label="Nombre" data-grupo="contacto"
+                   placeholder="Nombre y apellido" autocomplete="name" required>
+            <p class="campo__error" hidden></p>
+          </div>
+
+          <div class="campo">
+            <label for="s-tel">Tu teléfono <span class="req" aria-hidden="true">*</span></label>
+            <input type="tel" id="s-tel" name="telefono" data-label="Teléfono" data-grupo="contacto" inputmode="tel"
+                   placeholder="099 123 456" autocomplete="tel" required>
+            <p class="campo__error" hidden></p>
+          </div>
+
+          <div class="form__pie">
+            <button class="boton boton--primario boton--ancho" type="submit">Pedir turno por WhatsApp</button>
+            <p class="form__nota">Se abre WhatsApp con el mensaje ya escrito. Vos lo enviás.</p>
+            <p class="form__fallback" hidden>
+              El navegador bloqueó la apertura automática.
+              <a href="#" target="_blank" rel="noopener">Tocá acá para abrir WhatsApp</a>
+            </p>
+          </div>
+        </form>
+      </div>
+
+      <!-- ---------------- PANEL: REPARACIONES ---------------- -->
+      <div class="panel" id="panel-reparacion" role="tabpanel" aria-labelledby="tab-reparacion" data-panel="reparacion" hidden>
+        <p class="panel__intro">
+          Para cualquier marca. Contanos qué le pasa al auto y lo miramos.
+        </p>
+
+        <form class="form" data-flujo="reparacion" data-titulo="REPARACIÓN" novalidate>
+
+          <div class="campo">
+            <label for="r-auto">Marca y modelo <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="r-auto" name="auto" data-label="Marca y modelo"
+                   placeholder="Ej: Chevrolet Corsa 2011" autocomplete="off" required>
+            <p class="campo__error" hidden></p>
+          </div>
+
+          <div class="campo">
+            <label for="r-problema">¿Qué le pasa al auto? <span class="req" aria-hidden="true">*</span></label>
+            <textarea id="r-problema" name="problema" data-label="Qué le pasa" rows="4"
+                      placeholder="Ej: hace un ruido al frenar / se calienta / no arranca" required></textarea>
+            <p class="campo__ayuda">Contalo con tus palabras, no hace falta saber de mecánica.</p>
+            <p class="campo__error" hidden></p>
+          </div>
+
+          <fieldset class="campo campo--grupo">
+            <legend>¿Qué tan urgente es? <span class="req" aria-hidden="true">*</span></legend>
+            <div class="opciones" data-label="Urgencia">
+              <label class="opcion">
+                <input type="radio" name="urgencia" value="Puede esperar" required>
+                <span>Puede esperar</span>
+              </label>
+              <label class="opcion">
+                <input type="radio" name="urgencia" value="Lo necesito esta semana">
+                <span>Lo necesito esta semana</span>
+              </label>
+              <label class="opcion">
+                <input type="radio" name="urgencia" value="Es urgente">
+                <span>Es urgente</span>
+              </label>
+            </div>
+            <p class="campo__error" hidden></p>
+          </fieldset>
+
+          <div class="campo">
+            <label for="r-dia">Día que te viene bien <span class="req" aria-hidden="true">*</span></label>
+            <input type="date" id="r-dia" name="dia" data-label="Día que me viene bien" data-fecha required>
+            <p class="campo__ayuda">De lunes a viernes. Si es urgente, escribinos igual y vemos.</p>
+            <p class="campo__error" hidden></p>
+          </div>
+
+          <div class="campo">
+            <label for="r-nombre">Tu nombre <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="r-nombre" name="nombre" data-label="Nombre" data-grupo="contacto"
+                   placeholder="Nombre y apellido" autocomplete="name" required>
+            <p class="campo__error" hidden></p>
+          </div>
+
+          <div class="campo">
+            <label for="r-tel">Tu teléfono <span class="req" aria-hidden="true">*</span></label>
+            <input type="tel" id="r-tel" name="telefono" data-label="Teléfono" data-grupo="contacto" inputmode="tel"
+                   placeholder="099 123 456" autocomplete="tel" required>
+            <p class="campo__error" hidden></p>
+          </div>
+
+          <div class="form__pie">
+            <button class="boton boton--primario boton--ancho" type="submit">Pedir turno por WhatsApp</button>
+            <p class="form__nota">Se abre WhatsApp con el mensaje ya escrito. Vos lo enviás.</p>
+            <p class="form__fallback" hidden>
+              El navegador bloqueó la apertura automática.
+              <a href="#" target="_blank" rel="noopener">Tocá acá para abrir WhatsApp</a>
+            </p>
+          </div>
+        </form>
+      </div>
+
+      <!-- ---------------- PANEL: ALINEACIÓN Y BALANCEO ---------------- -->
+      <div class="panel" id="panel-alineacion" role="tabpanel" aria-labelledby="tab-alineacion" data-panel="alineacion" hidden>
+        <p class="panel__intro">
+          Trámite corto: cuatro datos y listo.
+        </p>
+
+        <form class="form form--corto" data-flujo="alineacion" data-titulo="ALINEACIÓN Y BALANCEO" novalidate>
+
+          <div class="campo">
+            <label for="a-auto">Marca y modelo <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="a-auto" name="auto" data-label="Marca y modelo"
+                   placeholder="Ej: Peugeot 208 2020" autocomplete="off" required>
+            <p class="campo__error" hidden></p>
+          </div>
+
+          <div class="campo">
+            <label for="a-dia">Día que te viene bien <span class="req" aria-hidden="true">*</span></label>
+            <input type="date" id="a-dia" name="dia" data-label="Día que me viene bien" data-fecha required>
+            <p class="campo__ayuda">De lunes a viernes. Después te confirmamos la hora.</p>
+            <p class="campo__error" hidden></p>
+          </div>
+
+          <div class="campo">
+            <label for="a-nombre">Tu nombre <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="a-nombre" name="nombre" data-label="Nombre" data-grupo="contacto"
+                   placeholder="Nombre y apellido" autocomplete="name" required>
+            <p class="campo__error" hidden></p>
+          </div>
+
+          <div class="campo">
+            <label for="a-tel">Tu teléfono <span class="req" aria-hidden="true">*</span></label>
+            <input type="tel" id="a-tel" name="telefono" data-label="Teléfono" data-grupo="contacto" inputmode="tel"
+                   placeholder="099 123 456" autocomplete="tel" required>
+            <p class="campo__error" hidden></p>
+          </div>
+
+          <div class="form__pie">
+            <button class="boton boton--primario boton--ancho" type="submit">Pedir turno por WhatsApp</button>
+            <p class="form__nota">Se abre WhatsApp con el mensaje ya escrito. Vos lo enviás.</p>
+            <p class="form__fallback" hidden>
+              El navegador bloqueó la apertura automática.
+              <a href="#" target="_blank" rel="noopener">Tocá acá para abrir WhatsApp</a>
+            </p>
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+    <p class="agenda__pie">
+      ¿Preferís hablar? Llamanos al
+      <a href="tel:+59846434358" data-bind="telefono-link"><strong data-bind="telefono">4643 4358</strong></a>
+      de lunes a viernes de 8:00 a 17:30.
+    </p>
+
+  </div>
+</section>
+
+<!-- =========================== SERVICIOS =========================== -->
+<section class="servicios" id="servicios" aria-labelledby="servicios-titulo">
+  <div class="contenedor">
+    <header class="seccion__cabecera">
+      <p class="etiqueta">Qué hacemos</p>
+      <h2 class="seccion__titulo" id="servicios-titulo">Servicios del taller</h2>
+    </header>
+
+    <div class="servicios__grilla">
+
+      <article class="servicio" data-revelar>
+        <p class="servicio__numero" aria-hidden="true">01</p>
+        <h3 class="servicio__titulo">Service oficial</h3>
+        <p>
+          Mantenimiento por kilometraje de Nissan, Peugeot, Mitsubishi, Renault,
+          Great Wall, Omoda y BYD, siguiendo el plan de cada marca.
+        </p>
+        <p class="servicio__cupos" data-cupos="service">3 autos por día</p>
+      </article>
+
+      <article class="servicio" data-revelar>
+        <p class="servicio__numero" aria-hidden="true">02</p>
+        <h3 class="servicio__titulo">Reparaciones generales</h3>
+        <p>
+          Diagnóstico y reparación mecánica, de la marca que sea.
+          Contanos qué le pasa al auto y lo miramos.
+        </p>
+        <p class="servicio__cupos" data-cupos="reparacion">2 autos por día</p>
+      </article>
+
+      <article class="servicio" data-revelar>
+        <p class="servicio__numero" aria-hidden="true">03</p>
+        <h3 class="servicio__titulo">Alineación y balanceo</h3>
+        <p>
+          Para que el auto no se vaya de lado y las cubiertas duren lo que
+          tienen que durar.
+        </p>
+        <p class="servicio__cupos" data-cupos="alineacion">1 auto por día</p>
+      </article>
+
+    </div>
+
+    <p class="servicios__nota">
+      ¿Necesitás algo que no está en la lista? Escribinos por WhatsApp y te decimos si lo hacemos.
+    </p>
+  </div>
+</section>
+
+<!-- =========================== UBICACIÓN =========================== -->
+<section class="ubicacion" id="ubicacion" aria-labelledby="ubicacion-titulo">
+  <div class="contenedor ubicacion__grid">
+
+    <div class="ubicacion__info">
+      <p class="etiqueta etiqueta--amarilla">Dónde estamos</p>
+      <h2 class="seccion__titulo" id="ubicacion-titulo">Juana de Ibarbourou 760, Melo</h2>
+      <p class="ubicacion__texto">
+        Estamos en Melo, departamento de Cerro Largo, código postal 37000. Si venís por primera vez, tocá &laquo;Cómo llegar&raquo; y el GPS te trae hasta la puerta.
+      </p>
+
+      <dl class="datos">
+        <div class="datos__fila">
+          <dt>Horario</dt>
+          <dd>
+            Lunes a viernes de 8:00 a 17:30<br>
+            <span class="tenue">Sábados y domingos cerrado</span>
+          </dd>
+        </div>
+        <div class="datos__fila">
+          <dt>Teléfono</dt>
+          <dd><a href="tel:+59846434358" data-bind="telefono-link"><span data-bind="telefono">4643 4358</span></a></dd>
+        </div>
+        <div class="datos__fila" data-bind-fila="email" hidden>
+          <dt>Email</dt>
+          <dd><a href="#" data-bind="email-link"><span data-bind="email"></span></a></dd>
+          <!-- REEMPLAZAR: email de contacto. Se carga desde js/config.js -->
+        </div>
+      </dl>
+
+      <p class="ubicacion__estado" data-estado>
+        <span class="estado__punto" aria-hidden="true"></span>
+        <span data-estado-texto>Lunes a viernes de 8:00 a 17:30</span>
+      </p>
+
+      <div class="ubicacion__botones">
+        <a class="boton boton--primario" href="https://www.google.com/maps/search/?api=1&amp;query=Juana+de+Ibarbourou+760,+37000+Melo,+Cerro+Largo,+Uruguay"
+           data-bind="maps-link" target="_blank" rel="noopener">Cómo llegar</a>
+        <a class="boton boton--linea" href="#agenda">Pedir turno</a>
+      </div>
+    </div>
+
+    <div class="ubicacion__mapa">
+      <iframe
+        title="Mapa de Automecanica AC en Juana de Ibarbourou 760, Melo"
+        src="https://www.google.com/maps?q=Juana%20de%20Ibarbourou%20760,%2037000%20Melo,%20Cerro%20Largo,%20Uruguay&amp;output=embed"
+        width="600" height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        style="border:0"></iframe>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- ============================= FOOTER ============================= -->
+<footer class="pie">
+  <div class="contenedor pie__grid">
+
+    <div class="pie__marca">
+      <img src="assets/logo.svg" alt="Automecanica AC" width="560" height="150" class="pie__logo" loading="lazy">
+      <p class="pie__frase">Taller mecánico y service oficial en Melo, Cerro Largo.</p>
+
+      <ul class="redes" data-redes hidden>
+        <!-- REEMPLAZAR: links de Instagram y Facebook. Se cargan desde js/config.js -->
+        <li><a href="#" data-bind="instagram" hidden target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="#" data-bind="facebook" hidden target="_blank" rel="noopener">Facebook</a></li>
+      </ul>
+    </div>
+
+    <div class="pie__col">
+      <h2 class="pie__titulo">Contacto</h2>
+      <ul class="pie__lista">
+        <li data-bind="direccion-completa">Juana de Ibarbourou 760, Melo</li>
+        <li>37000 Melo, Cerro Largo</li>
+        <li><a href="tel:+59846434358" data-bind="telefono-link"><span data-bind="telefono">4643 4358</span></a></li>
+        <li><a href="https://wa.me/59899000000" data-wsp-simple target="_blank" rel="noopener">WhatsApp</a></li>
+      </ul>
+    </div>
+
+    <div class="pie__col">
+      <h2 class="pie__titulo">Horario</h2>
+      <ul class="pie__lista">
+        <li>Lunes a viernes: 8:00 a 17:30</li>
+        <li class="tenue">Sábados: cerrado</li>
+        <li class="tenue">Domingos: cerrado</li>
+      </ul>
+    </div>
+
+    <div class="pie__col">
+      <h2 class="pie__titulo">La web</h2>
+      <ul class="pie__lista">
+        <li><a href="#marcas">Marcas</a></li>
+        <li><a href="#agenda">Pedir turno</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#ubicacion">Dónde estamos</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="contenedor pie__legal">
+    <p>© <span data-bind="anio">2026</span> Automecanica AC. Melo, Cerro Largo, Uruguay.</p>
+    <p class="pie__credito">
+      Sitio hecho por <a href="https://designweb.uy" target="_blank" rel="noopener">DesignWeb.uy</a>
+    </p>
+  </div>
+</footer>
+
+<!-- Botón flotante de WhatsApp -->
+<a class="wsp-flotante" href="https://wa.me/59899000000" data-wsp-simple target="_blank" rel="noopener"
+   aria-label="Escribinos por WhatsApp">
+  <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true" focusable="false">
+    <path fill="currentColor" d="M16 3C8.8 3 3 8.8 3 16c0 2.3.6 4.5 1.7 6.4L3 29l6.8-1.8c1.9 1 4 1.6 6.2 1.6 7.2 0 13-5.8 13-13S23.2 3 16 3zm0 23.6c-2 0-3.9-.5-5.5-1.5l-.4-.2-4 1.1 1.1-3.9-.3-.4c-1.1-1.7-1.6-3.6-1.6-5.6C5.3 10.1 10.1 5.3 16 5.3S26.7 10.1 26.7 16 21.9 26.6 16 26.6zm5.9-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2s-.8 1-1 1.2c-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.8s1.2 3.3 1.4 3.5c.2.2 2.4 3.7 5.8 5.1.8.4 1.4.6 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.6.3-.8.3-1.4.2-1.6-.1-.1-.3-.2-.6-.3z"/>
+  </svg>
+  <span class="wsp-flotante__texto">WhatsApp</span>
+</a>
+
+<!-- Fondo del menú mobile -->
+<div class="overlay" id="overlay" hidden></div>
+
+<!-- SEO local: datos estructurados -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "Automecanica AC",
+  "description": "Taller mecánico con service oficial de Nissan, Peugeot, Mitsubishi, Renault, Great Wall, Omoda y BYD en Melo, Cerro Largo. Reparaciones generales, alineación y balanceo.",
+  "image": "assets/logo.svg",
+  "telephone": "+598 4643 4358",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Juana de Ibarbourou 760",
+    "addressLocality": "Melo",
+    "addressRegion": "Cerro Largo",
+    "postalCode": "37000",
+    "addressCountry": "UY"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Melo" },
+    { "@type": "AdministrativeArea", "name": "Cerro Largo" }
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "17:30"
+    }
+  ],
+  "brand": [
+    { "@type": "Brand", "name": "Nissan" },
+    { "@type": "Brand", "name": "Peugeot" },
+    { "@type": "Brand", "name": "Mitsubishi" },
+    { "@type": "Brand", "name": "Renault" },
+    { "@type": "Brand", "name": "Great Wall" },
+    { "@type": "Brand", "name": "Omoda" },
+    { "@type": "Brand", "name": "BYD" }
+  ],
+  "makesOffer": [
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Service oficial por kilometraje" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Reparaciones mecánicas generales" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Alineación y balanceo" } }
+  ]
+}
+</script>
+
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
