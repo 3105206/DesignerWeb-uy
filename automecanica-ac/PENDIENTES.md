@@ -48,25 +48,33 @@ Horizontales, no verticales.
   está referenciado en `index.html` (buscar `og:image`), así que alcanza con
   reemplazarlo respetando el nombre y el tamaño.
 
-### 3. Logo original en buena calidad
+### 3. Logo en calidad vectorial
 
-En la web hay una **reconstrucción vectorial** del logo (`assets/logo.svg`),
-redibujada a partir del logo original: mismas formas, mismos colores y misma
-composición (cápsula azul + mancha amarilla + AC con contorno). La diferencia
-es la tipografía: usa Archivo, la del sitio, no la letra exacta del original.
+La web ya usa **el logo real del taller**. El archivo que llegó es un JPG de
+960x960 con fondo blanco (`assets/logo-original.jpg`, guardado tal cual como
+vino). Para poder usarlo sobre el azul del header hubo que recortarle el
+margen blanco y sacarle el fondo: ese resultado es `assets/logo.png`, que es
+lo que muestra la web.
 
-Lo ideal es reemplazarla por el archivo del cliente: el **vectorial**
-(`.ai`, `.svg` o `.pdf`) o, si no existe, el `.png` más grande que tengan,
-con fondo transparente.
+Lo que todavía conviene conseguir es el **archivo vectorial** (`.ai`, `.svg`,
+`.eps` o `.pdf`) o un PNG grande con fondo transparente, porque:
 
-- **Dónde va:** en `assets/`. Si el archivo es `logo.png`, hay que cambiar
-  la ruta en `index.html`: aparece 2 veces (header y pie), buscar
-  `assets/logo.svg`. Y ajustar los atributos `width` y `height` del `<img>`
-  a las medidas reales del archivo nuevo, así la página no "salta" mientras
-  carga.
-- El favicon (`assets/favicon.svg`) y la imagen de previsualización
-  (`assets/og-image.png`) están hechos con la misma reconstrucción: conviene
-  rehacerlos también cuando llegue el original.
+- El JPG original es de baja calidad y tiene artefactos de compresión. A los
+  tamaños en que se usa (36-46px de alto) no se notan, pero si mañana hay que
+  imprimir un cartel o hacer una gráfica, no alcanza.
+- El azul de la cápsula en ese JPG es un poco más oscuro (aprox. `#04195A`)
+  que el `#152A6B` de la paleta del sitio. Por eso, sobre el header azul, se
+  llega a insinuar el contorno de la cápsula. Con el archivo original se puede
+  afinar: o se ajusta la paleta al azul exacto de la marca, o se pide una
+  versión del logo sin la cápsula para usar sobre fondo azul.
+
+- **Si llega un archivo nuevo:** va en `assets/`. Si tiene otro nombre o
+  medidas, hay que actualizar en `index.html` el `src` y los atributos
+  `width`/`height` del `<img>` (aparece 2 veces: header y pie), así la página
+  no "salta" mientras carga.
+- El favicon (`assets/favicon.svg`) es un ícono dibujado aparte, con las
+  formas de la marca: a 16 px un recorte del JPG se ve sucio, un vector no.
+  Conviene rehacerlo también si llega el logo vectorial.
 
 ### 4. Email de contacto
 

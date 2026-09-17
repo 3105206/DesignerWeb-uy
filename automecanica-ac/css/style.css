@@ -169,7 +169,7 @@ a:hover { color: var(--azul-claro); }
 }
 
 .marca { display: flex; align-items: center; text-decoration: none; }
-.marca__logo { height: 38px; width: auto; }
+.marca__logo { height: 36px; width: auto; }
 
 .hamburguesa {
   display: inline-flex;
@@ -661,7 +661,7 @@ a:hover { color: var(--azul-claro); }
   padding: 48px 0 100px;
 }
 .pie__grid { display: grid; gap: 32px; }
-.pie__logo { height: 48px; width: auto; }
+.pie__logo { height: 46px; width: auto; }
 .pie__frase { margin: 16px 0 0; max-width: 28em; }
 
 .pie__titulo {
@@ -771,7 +771,7 @@ a:hover { color: var(--azul-claro); }
   html { scroll-padding-top: 96px; }
 
   .cabecera__fila { min-height: 76px; }
-  .marca__logo { height: 46px; }
+  .marca__logo { height: 44px; }
   .hamburguesa { display: none; }
 
   .nav {

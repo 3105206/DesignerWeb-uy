@@ -241,6 +241,10 @@ viene bien al cliente; no reserva nada automáticamente.
   sobre blanco.
 - SEO local: título y descripción con "Melo" y "Cerro Largo", Open Graph y
   datos estructurados `AutoRepair` (dirección, teléfono, horarios y marcas).
+- El logo que se muestra es `assets/logo.png`: el logo real del taller,
+  recortado y con el fondo blanco sacado para que se pueda usar sobre el azul
+  del header. El archivo tal como lo mandó el cliente quedó guardado sin
+  tocar en `assets/logo-original.jpg`.
 - Se respeta `prefers-reduced-motion` para quien tenga las animaciones
   desactivadas en su sistema.
 
